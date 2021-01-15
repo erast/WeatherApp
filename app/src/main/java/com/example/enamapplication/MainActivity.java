@@ -33,6 +33,7 @@ public class MainActivity extends AppCompatActivity {
         mCity=findViewById(R.id.mCity);
         mTemp=findViewById(R.id.mTemp);
         mDescription=findViewById(R.id.mDescription);
+        afficher();
     }
 
     public void afficher()
@@ -58,6 +59,9 @@ public class MainActivity extends AppCompatActivity {
 
             }
         }) ;
+        
+        RequestQueue queue= Volley.newRequestQueue(this);
+        queue.add(jsonObjectRequest);
 
     }
 }
